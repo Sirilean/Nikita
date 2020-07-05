@@ -1,0 +1,22 @@
+{
+	"name": "Hello World",
+	"description": "Hello World via UDP",
+	"version": "9001",
+	"manifest_version": 2,
+	"permissions": [
+		{"socket": ["udp-send-to", "udp-bind"]},
+		"app.window"
+	],
+	"icons": { "128": "icon/pokemon-icon.png"},	
+	"sockets": {
+		"udp": {
+			"send": ["*"],
+			"bind": ["*"]
+		}
+	},
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	}
+}
